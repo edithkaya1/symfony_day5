@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %} 
+{% block title %}Hello {{ fname }}{% endblock %}
+{% block body %}
+<div class="container-fluid bg-image">
+  <h1>Create new course for dog school Gini!</h1>
+
+  {{ form_start(form) }}
+  {{ form_widget(form) }}
+  <button class="btn btn-lg btn-dark my-2 mx-5" type="submit">Create course</button>
+  {{ form_end(form) }}
+
+</div>
+{% endblock %}

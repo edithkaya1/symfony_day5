@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %} {% block title %}Welcome!{% endblock %} {% block
+    body %}
+    <div class="container-fluid bg-image">
+      <h1>Welcome to GINI's dog school!</h1>
+      <h2>Harmony and joy in dog training.</h2>
+      <div class="container-fluid">
+        <img
+          class="hero1"
+          src="https://cdn.pixabay.com/photo/2014/11/28/08/28/dog-548617_1280.jpg"
+          alt="Dog"
+        />
+        <h3>Please choose from my variety of courses:</h3>
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+          <ul class="list-group courseUl">
+            <li class="list-group-item list-group-item-warning">Puppy courses</li>
+            <li class="list-group-item list-group-item-warning">
+              Everyday courses
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              Activity courses
+            </li>
+            <li class="list-group-item list-group-item-warning">
+              Individual courses
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+      </div>
+    </div>
+    {% endblock %}
+    

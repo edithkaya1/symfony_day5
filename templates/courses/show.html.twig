@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %} {% block title %}
+Hello {{ fname }}{% endblock %}
+{% block body %}
+<div class="container-fluid bg-image">
+  <h1>Show details for courses!</h1>
+  <div class="row">
+    <div class="col col-md-6 mx-auto">
+        <div>
+            <div class="card my-3 mx-auto w-75">
+              <div class="card-header fw-bold text-center">I'm {{ course.name }}</div>
+              <img
+                src="{{ asset('pictures/' ~ course.picture) }}"
+                class="card-img-top card-img"
+                alt="{{ course.picture }}"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center fs-5">Type: {{ course.type }}</h5>
+                <h5 class="card-title text-center fs-5">
+                  Price: {{ course.price }}€
+                </h5>
+                <p class="card-title text-center">No of units: {{ course.noUnits }}</p>
+                <p class="card-text text-center">{{ course.description }}</p>
+              </div>
+              <div class="card-footer text-center p-3 text-body-secondary">
+                <a href="{{path('app_courses_edit', {'id':course.id})}}" class="btn btn-dark m-3">Edit</a>
+                <form action="{{path('app_courses_delete', {'id':course.id})}}" method="POST">
+                    <button class="btn btn-danger">Delete</button>   
+                  </form>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}
